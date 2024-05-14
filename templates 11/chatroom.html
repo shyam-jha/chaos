@@ -1,0 +1,28 @@
+<h1>chat room</h1>
+<div>
+  {% for message in room_messages %}
+  <h5>{{message.created}} {{message.user}}</h5>
+  <h3>{{message.body}}</h3>
+  {% endfor %}
+
+  <div>
+  </div>
+  <div>
+    <form action="" method="POST" class="header__search">
+      {% csrf_token %}
+      <label>
+        <input name="body" placeholder="Type your message here" />
+      </label>
+  </form>
+  </div>
+</div>
+
+<div>
+    <br>
+    <h1>PARTICIPANTS</h1>
+    {% for participant in participants %}
+    
+    <a href="{% url 'profile' pk=participant.id %}">@{{participant}}</a>
+    <hr>
+    {% endfor %}
+</div>

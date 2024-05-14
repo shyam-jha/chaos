@@ -1,0 +1,365 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Cinemactic Mate</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css'  % }" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+
+ <!-- ======= Header ======= -->
+ <header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+    <h1 class="logo me-auto me-lg-0"><a href="index.html">Cinemactic Chaos</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        
+        <li class="nav-item dropdown pe-3">
+          <a
+            class="nav-link nav-profile d-flex align-items-center pe-0"
+            href="#"
+            data-bs-toggle="dropdown"
+          >
+
+          <!-- <img
+              src="{% static 'img/gallery/gallery-1.jpg' %}"
+              alt="Profile"
+              class="rounded-circle"
+            /> -->
+            
+            <span class="d-none d-md-block dropdown-toggle ps-2"
+              >Shyam Jha</span
+            > </a
+          ><!-- End Profile Iamge Icon -->
+
+          <ul
+            class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"
+          >
+            <li class="dropdown-header">
+              <h6>Shyam Jha</h6>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="profile1.html"
+              >
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+          
+
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="pages-faq.html"
+              >
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="login.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>LogIn</span>
+              </a>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="register.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Register</span>
+              </a>
+            </li>
+          </ul>
+          <!-- End Profile Dropdown Items -->
+        </li>
+        <li><a class="nav-link scrollto active" href="index copy.html">Home</a></li>
+        <li><a class="nav-link scrollto" href="contact.html">Contact Us</a></li>
+        <li><a class="nav-link scrollto" href="#contact">About Us</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+  </div>
+</header><!-- End Header -->
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>Welcome to <span>Cinemactic Chaos</span></h1>
+          <h2>All your interest is here !! </h2>
+
+          <div class="btns">
+            <a href="#menu" class="btn-menu animated fadeInUp scrollto">UNIVERSES</a>
+            <a href="contact.html" class="btn-book animated fadeInUp scrollto">CONTACT US</a>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+          <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="{% static 'img/hero.jpg' %}" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Cinemactic Chaos</h3>
+            <p class="fst-italic">
+              A one and only devotional website to enrich your recommende movies personal interest.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Check out all your favourite movie Universes Information.</li>
+              <li><i class="bi bi-check-circle"></i> Get all the watching links.</li>
+              <li><i class="bi bi-check-circle"></i> Join the chatrooms and communicate with the people who shares the same interest as you.</li>
+            </ul>
+            <p>
+              Enjoy everthing and communicate with us and suggest all the Improvements !! 
+            </p>
+            <p>
+              We are up to listen you !!!
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= Menu Section ======= -->
+    <section id="menu" class="menu section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Cinemactic Universes</h2>
+          <p>THE ELEGANT AND PUREST UNIVERSES</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+              <li class="filter-active">All</li>
+              <li>Horror</li>
+              <li>Action</li>
+              <li>Science Fictional</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div>
+        <form action="index copy.html" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+                
+              <div class="form-group mt-3">
+                <input class="form-control" name="q" placeholder="Search a universe">
+              </div>
+        </form>
+        </div>
+
+        
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+          
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="{% static 'img/hero-2.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="check2.html">Marvel Cinemactic Universe</a><span><i class="bi bi-star"></i> 5</span>
+            </div>
+            <div class="menu-ingredients">
+              <div>Total Movie count - "32"</div>
+              <div>Genre - "Action"</div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="{% static 'img/hero.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Harry Cinemactic Universe</a><span><i class="bi bi-star"></i> 5</span>
+            </div>
+            <div class="menu-ingredients">
+              <div>Total Movie count - "32"</div>
+              <div>Genre - "Action"</div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="{% static 'img/hero-3.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Deccan Cinemactic Universe</a><span><i class="bi bi-star"></i> 5</span>
+            </div>
+            <div class="menu-ingredients">
+              <div>Total Movie count - "32"</div>
+              <div>Genre - "Action"</div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="{% static 'img/hero-1.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Comic Cinemactic Universe</a><span><i class="bi bi-star"></i> 5</span>
+            </div>
+            <div class="menu-ingredients">
+              <div>Total Movie count - "32"</div>
+              <div>Genre - "Action"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Cinemactic Chaos</h3>
+              <p>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Testimonials</h4>
+            <p>Share your experiences with us and tell us how you feel.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Submit">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Restaurantly</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

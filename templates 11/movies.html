@@ -1,0 +1,20 @@
+<h1>Movies Page</h1>
+
+<h2>{{universe.name}}</h2>
+<p>{{universe.description}}</p>
+<br>
+<hr>
+<a href="{% url 'chat-room' universe.id %}">chat room </a>
+<br>
+<hr>
+
+<div>
+  {% for movie in movies %}
+  <a href="{{movie.watching_link}}"
+    ><img src=" {{movie.image.url}} " alt="movie" height="100px"
+  /></a>
+  <h4>{{movie.title}} was release on {{movie.release_date}}</h4>
+  <h4>its gross income is ${{movie.gross_income}}</h4>
+  <h4>it was directed by {{movie.director}}</h4>
+  {% endfor %}
+</div>

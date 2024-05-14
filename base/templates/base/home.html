@@ -1,0 +1,116 @@
+
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>Welcome to <span>Cinemactic Chaos</span></h1>
+                    <h2>All your interest is here !! </h2>
+
+                    <div class="btns">
+                        <a href="#menu" class="btn-menu animated fadeInUp scrollto">UNIVERSES</a>
+                        <a href="contact.html" class="btn-book animated fadeInUp scrollto">CONTACT US</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a>
+                </div>
+
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="about-img">
+                            <img src="{% static 'img/hero.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                        <h3>Cinemactic Chaos</h3>
+                        <p class="fst-italic">
+                            A one and only devotional website to enrich your recommende movies personal interest.
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i> Check out all your favourite movie Universes
+                                Information.</li>
+                            <li><i class="bi bi-check-circle"></i> Get all the watching links.</li>
+                            <li><i class="bi bi-check-circle"></i> Join the chatrooms and communicate with the people
+                                who shares the same interest as you.</li>
+                        </ul>
+                        <p>
+                            Enjoy everthing and communicate with us and suggest all the Improvements !!
+                        </p>
+                        <p>
+                            We are up to listen you !!!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+
+
+<section id="menu" class="menu section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Cinemactic Universes</h2>
+            <p>THE ELEGANT AND PUREST UNIVERSES</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="menu-flters">
+                    <a class="p-2" href="{% url 'home' %}">All</a>
+                    <a class="p-2" href="{% url 'home' %}?q=horror">Horror</a>
+                    <a class="p-2" href="{% url 'home' %}?q=action">Action</a>
+                    <a class="p-2" href="{% url 'home' %}?q=scifictional">Science Fictional</a>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <form action="" method="GET" data-aos="fade-up" data-aos-delay="100">
+                <div class="form-group mt-3">
+                    <input class="form-control" name="q" placeholder="Search a universe">
+                </div>
+            </form>
+        </div>
+
+
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+            {% for universe in universes %}
+            <div class="col-lg-6 menu-item filter-starters">
+                <img src="{{universe.image.url}}" class="menu-img" alt="">
+                <div class="menu-content">
+                    <a href="{% url 'movies' universe.id %}">{{ universe.name }}</a><span><i class="bi bi-star"></i>
+                        {{universe.rating}}</span>
+                </div>
+                <div class="menu-ingredients">
+                    <div>Total Movie count - "{{ universe.total_movies }}"</div>
+                    <div>Genre - {% for genre in universe.genres.all %}
+                        {{ genre.name }}{% if not forloop.last %}, {% endif %}
+                        {% endfor %}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}

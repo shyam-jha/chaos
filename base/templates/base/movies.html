@@ -1,0 +1,82 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+        <div class="pt-5">
+
+
+            <div class=" pt-5  order-2 order-lg-1 content">
+                <h3>{{universe.name}}</h3>
+
+                <div class="pt-5">
+                    <p>
+                        {{universe.description}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><!-- End About Section -->
+
+
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+
+
+
+
+
+
+    <!-- ======= Menu Section ======= -->
+    <section id="menu" class="menu">
+        <div class="container" data-aos="fade-up">
+
+
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <ul id="menu-flters">
+                        <li class="filter-active">Movies</li>
+                        <a href="{% url 'chat-room' universe.id %}">
+                            <li>Room Handle</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <!--write the content of movies-->
+
+            <section id="testimonials" class="testimonials section-bg">
+                {% for movie in movies %}
+                <div class="container" data-aos="fade-up">
+                    <div class="testimonial-item">
+                        <div class="row">
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="about-img">
+                                    <a href="{{movie.watching_link}}"><img src="{{movie.image.url}}" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 pt-1 pt-lg-0 order-2 order-lg-1 content">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    {{movie.title}} was released on {{movie.release_date}} with a gross income of
+                                    ${{movie.gross_income}}
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    <br>
+                                    <br>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    It was directed by "{{movie.director}}"
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- End testimonial item -->
+                </div>
+                {% endfor %}
+            </section>
+        </div>
+    </section>
+
+    {% endblock %}

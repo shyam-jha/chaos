@@ -1,0 +1,79 @@
+{% load static %}
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+        <h1 class="logo me-auto me-lg-0"><a href="{% url 'home' %}">Cinemactic Chaos</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+
+                <li class="nav-item dropdown pe-3">
+                    {% if request.user.is_authenticated %}
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
+                        data-bs-toggle="dropdown">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">{{request.user.username}}</span>
+                    </a><!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>{{request.user.username}}</h6>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center"
+                                href="{% url 'profile' pk=request.user.id %}">
+                                <i class="bi bi-person"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="{% url 'logout' %}">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>LogOut</span>
+                            </a>
+                        </li>
+                    </ul>
+                    {% else %}
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
+                        data-bs-toggle="dropdown">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">Log In</span>
+                    </a><!-- End Profile Iamge Icon -->
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="{% url 'login' %}">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>LogIn</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="{% url 'register' %}">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Register</span>
+                            </a>
+                        </li>
+                    </ul>
+                    {% endif %}
+
+
+
+                    <!-- End Profile Dropdown Items -->
+                </li>
+
+                <li><a class="nav-link scrollto active" href="index copy.html">Home</a></li>
+                <li><a class="nav-link scrollto" href="contact.html">Contact Us</a></li>
+                <li><a class="nav-link scrollto" href="#contact">About Us</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+    </div>
+</header><!-- End Header -->

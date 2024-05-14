@@ -1,0 +1,80 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+        <!-- End Page Title -->
+
+        <section class="section profile">
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-body-1 profile-card pt-4 d-flex flex-column align-items-center">
+                            <img src="{% static 'img/bitmoji.jpg' %}" alt="Profile" />
+                            <h2>{{ user.username }}</h2>
+                            <div class="social-links mt-2">
+                                <a href="{{ profile.twitter }}" class="twitter"><i class="bi bi-twitter"></i></a>
+                                <a href="{{ profile.facebook }}" class="facebook"><i class="bi bi-facebook"></i></a>
+                                <a href="{{ profile.instagram }}" class="instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="{{ profile.linkedin }}" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-8">
+                    <div class="card">
+                        <div class="card-body-1 pt-2">
+                            <!-- Bordered Tabs -->
+                            <section id="menu" class="menu">
+                                <div class="container" data-aos="fade-up">
+                                    <div class="row" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="col-lg-12 d-flex justify-content-center">
+                                            <ul id="menu-flters">
+                                                <li class="filter-active">Overview</li>
+                                                <li class="filter-starter"><a href="{% url 'editpfp' user.id %}">Edit profile</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--write the content of movies-->
+                                    <div class="tab-content pt-2">
+                                        <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                                            <h5 class="card-title">About</h5>
+                                            <p class="small fst-italic">
+                                                {{ profile.interest_topics }}
+                                            </p>
+
+                                            <h5 class="card-title">Profile Details</h5>
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-4 label">Full Name</div>
+                                                <div class="col-lg-9 col-md-8">{{ profile.fullname }}</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-4 label">Interested Genre</div>
+                                                <div class="col-lg-9 col-md-8">{{ profile.interested_genres }}</div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                    <!--end the content-->
+                                </div>
+                            </section><!-- End Menu Section -->
+
+
+                            <!-- End Bordered Tabs -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+    </section>
+</main>
+
+{% endblock %}

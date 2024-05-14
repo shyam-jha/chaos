@@ -1,0 +1,90 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <section
+            class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4 pt-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="pt-4 pb-2">
+                                    <h5 class="card-title text-center pb-0 fs-4">Edit Your Details</h5>
+                                </div>
+
+                                <form class="row g-3 needs-validation" action="" method="post">
+                                    {% csrf_token %}
+
+                                    <div class="col-12">
+                                        <label for="fullname" class="form-label">Fullname</label>
+                                        <div class="input-group has-validation">
+                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            <input type="text" name="fullname" class="form-control" id="fullname"
+                                                required>
+                                            <div class="invalid-feedback">Please choose a username.</div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-12">
+                                        <label for="Interested Genre" class="form-label">Interested Genre</label>
+                                        <input type="string" name="interested_genre" class="form-control" id="interested_genre">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="About" class="form-label">About</label>
+                                        <input type="string" name="about" class="form-control" id="about" required>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="insta" class="form-label">Insta Link</label>
+                                        <input type="string" name="insta" class="form-control" id="insta">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="twitter" class="form-label">Twitter Link</label>
+                                        <input type="string" name="twitter" class="form-control" id="twitter">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="facebook" class="form-label">FaceBook Link</label>
+                                        <input type="string" name="facebook" class="form-control" id="facebook">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="linkedin" class="form-label">Linkedin Link</label>
+                                        <input type="string" name="Linkedin" class="form-control" id="Linkedin">
+                                    </div>
+
+
+
+
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100" type="submit">Submit</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </section><!-- End About Section -->
+
+
+
+</main><!-- End #main -->
+
+{% endblock %}

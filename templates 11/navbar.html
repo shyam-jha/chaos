@@ -1,0 +1,13 @@
+<navbar>
+    <a href="{ % url 'home' % } "> Cinematic chaos </a>
+    <hr>
+    {% if request.user.is_authenticated %}
+    <a href="{% url 'profile' pk=request.user.id %}"> {{request.user.username}} </a>
+    {% else %}
+    <a href="{% url 'login' %}"> login </a>
+    {% endif %}
+    <div><a href="{% url 'logout' %}"> logout </a></div>
+    <hr>
+    
+
+</navbatr>
